@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Before Create</router-link> |
+      <router-link to="/created">Created</router-link> |
+      <router-link to="/beforemount">Before Mount</router-link> |
+      <router-link to="/mounted">Mounted</router-link> |
+      <router-link to="/beforeupdate">Before Update</router-link> |
+      <router-link to="/updated">Updated</router-link> |
+      <router-link to="/beforedestroy">Before Destroy</router-link> |
     </div>
     <router-view />
   </div>
@@ -28,5 +33,15 @@
       color: #42b983;
     }
   }
+}
+.hello > p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ff0052;
+  font-style: italic;
+  border: 1px solid #ce6b6b;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 50px;
+  background: #cff1e4;
 }
 </style>

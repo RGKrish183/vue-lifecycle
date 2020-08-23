@@ -1,23 +1,52 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
+
+// Life Cycle Compoents
+import BeforeCreate from "@/views/BeforeCreate.vue";
+import Created from "@/views/Created.vue";
+import BeforeMount from "@/views/BeforeMount.vue";
+import Mounted from "@/views/Mounted.vue";
+import BeforeUpdate from "@/views/BeforeUpdate.vue";
+import Updated from "@/views/Updated.vue";
+import BeforeDestroy from "@/views/BeforeDestroy.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "BeforeCreate",
+    component: BeforeCreate
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/created",
+    name: "Created",
+    component: Created
+  },
+  {
+    path: "/beforemount",
+    name: "BeforeMount",
+    component: BeforeMount
+  },
+  {
+    path: "/mounted",
+    name: "Mounted",
+    component: Mounted
+  },
+  {
+    path: "/beforeupdate",
+    name: "BeforeUpdate",
+    component: BeforeUpdate
+  },
+  {
+    path: "/updated",
+    name: "Updated",
+    component: Updated
+  },
+  {
+    path: "/beforedestroy",
+    name: "BeforeDestroy",
+    component: BeforeDestroy
   }
 ];
 
