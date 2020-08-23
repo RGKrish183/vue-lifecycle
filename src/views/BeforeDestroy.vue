@@ -1,8 +1,5 @@
 <template>
   <div class="hello">
-    <h3 v-show="coolStatus">
-      <BarDestroy :coolMethods="coolMethods" :mthdLogger="mthdLogger" />
-    </h3>
     <h1>Count : {{ counter }}</h1>
     <button @click="mthdCounter">Click for BeforeUpdate and Updated</button>
     <h3>Order Log :</h3>
@@ -14,21 +11,6 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-
-class BarDestroy extends Vue {
-  @Prop() coolMethods!: any;
-  @Prop() mthdLogger!: any;
-
-  // Hooks #7
-  beforeDestroy() {
-    this.mthdLogger("Cleanup process- beforeDestroy");
-  }
-
-  // Hooks #8
-  destroy() {
-    this.mthdLogger("Cleanup process- destroy");
-  }
-}
 
 @Component
 export default class BeforeDestroy extends Vue {
